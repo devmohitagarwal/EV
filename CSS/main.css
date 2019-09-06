@@ -1,0 +1,75 @@
+﻿.event-visualizer-wrapper {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background: rgb(0, 0, 0, .4);
+    z-index: 9999999;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.event-visualizer-wrapper .event-visualizer {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: default;
+    transition: all cubic-bezier(.18, .89, .32, 1.28) .4s;
+    transform: scale(0)
+}
+
+.event-visualizer-wrapper .event-visualizer .banner {
+    background: #f65656;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px
+}
+
+.event-visualizer-wrapper .event-visualizer .banner .image img,
+.event-visualizer-wrapper .event-visualizer .banner .image svg {
+    height: 45px
+}
+
+.event-visualizer-wrapper .event-visualizer-body .event-head {
+    text-align: center;
+    margin: 13px 0 8px 0;
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: .35px
+}
+
+.event-visualizer-wrapper .event-visualizer-body .event-body {
+    margin: auto;
+    font-size: 15px;
+    max-width: 300px;
+    letter-spacing: .35px;
+    text-align: center;
+    line-height: 1.5;
+    padding: 0px 10px;
+    max-height: 60vh;
+    overflow-x: auto;
+}
+
+.event-visualizer-wrapper .event-visualizer-body .event-button {
+    /* height: 40px; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.event-visualizer-wrapper .event-visualizer-body .event-button .event-button-click {
+    width: 100px;
+    background: #26bc6a;
+    color: #fff;
+    border-radius: 10px;
+    padding: 8px 7px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.scale-1 {
+    transform: scale(1) !important
+}
