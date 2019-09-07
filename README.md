@@ -4,10 +4,11 @@
 #### Ideology:
 ## EV or Event-Visulizer i a tiny , event-driven user interaction modal.
 
-    - A simple (ultra) tiny modal/alert box, built out of necessity in projects where a simple modal/popup/yes-no event is needed.
+    - A simple (ultra) tiny modal/alert box, built out of necessity in projects where a 
+      simple modal/popup/yes-no event is needed.
     - Highly configurable with configurable buttons and callbacks.
     - Pure Javascript, No HTML or CSS needs to be pre added, though you can add your own html with same classes
-     if one needs to modify the structure.
+      if one needs to modify the structure.
 
 ---
 - [Installation](#installation)
