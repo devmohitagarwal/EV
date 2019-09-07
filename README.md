@@ -6,7 +6,8 @@
 
     - A simple (ultra) tiny modal/alert box, built out of necessity in projects where a simple modal/popup/yes-no event is needed.
     - Highly configurable with configurable buttons and callbacks.
-    - Pure Javascript, No HTML or CSS needs to be pre added, though you can add your own html with same classes if one needs to modify the structure.
+    - Pure Javascript, No HTML or CSS needs to be pre added, though you can add your own html with same classes
+     if one needs to modify the structure.
 
 ---
 - [Installation](#installation)
@@ -30,7 +31,7 @@
 
 ## Installation
 
-EV, like any other javascript file,[just include it](https://www.tutorialspoint.com/javascript/javascript_placement.htm) in your project and all is set.
+**EV**, like any other javascript file,[just include it](https://www.tutorialspoint.com/javascript/javascript_placement.htm) in your project and all is set.
 
 
 ## Running with Docker
