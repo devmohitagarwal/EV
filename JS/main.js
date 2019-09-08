@@ -11,7 +11,7 @@
         constructor(object = {}) {
             this.buttonText = object.text || "";
             this.buttonClass = object.class || "";
-            this.buttonFunction = object.onClick || function () {};
+            this.buttonFunction = object.onClick || function () { };
             this.buttonData = object.data || "";
             this.buttonBgColor = object.bgColor || "";
         }
@@ -29,22 +29,22 @@
             this.onClose.event = this.onClose.event;
             this.onClose.closeData = this.onClose.dataToPassToFunction;
             this.buttons = options.buttons || [];
-            this.evetType = options.evetType || "success";
-            switch (options.evetType.toLowerCase()) {
+            this.eventType = options.eventType || "success";
+            switch (options.eventType.toLowerCase()) {
                 case "success":
                     this.themeColor = this.themeColor || "#20d472";
                     this.icon = successSVG;
                     break;
                 case "error":
-                    this.themeColor = this.themeColor ||"#f65656";
+                    this.themeColor = this.themeColor || "#f65656";
                     this.icon = errorSVG;
                     break;
                 case "warning":
-                    this.themeColor = this.themeColor ||"#fdc702";
+                    this.themeColor = this.themeColor || "#fdc702";
                     this.icon = errorSVG;
                     break;
                 case "info":
-                    this.themeColor = this.themeColor ||"#fdc702";
+                    this.themeColor = this.themeColor || "#fdc702";
                     this.icon = infoSVG;
                     break;
             }
@@ -59,7 +59,7 @@
         document.querySelector('body').appendChild(cssHolder);
         document.querySelector('body').appendChild(node)
     }
-    function OpenEVPopup (options) {
+    function OpenEVPopup(options) {
         var $element = document.querySelector('body #ev1');
         this.data = new EVObj(options);
         populateEV(this.data);
@@ -68,9 +68,9 @@
             $element.querySelector('.event-visualizer').classList.add('scale-1');
         }, 100);
     }
-    function populateEV(data){
+    function populateEV(data) {
         var $element = document.querySelector('body #ev1');
-        $element.classList.contains('isEVOpen') ? closeEV(): false;
+        $element.classList.contains('isEVOpen') ? closeEV() : false;
         bodyOverflowvalue = document.querySelector('body').style.overflow;
         document.querySelector('body').style.overflow = 'hidden';
         $element.querySelector('.banner').style.background = data.themeColor;
@@ -125,9 +125,9 @@
 })();
 
 
-// //Samples 
+//Samples 
 // EV.show({
-//     evetType: "Info",
+//     eventType: "Info",
 //     heading: "Information",
 //     eventDescription: "<b>Private App :</b> You can generate a key which can be used to access this template by other users who dont have access to your market place. </br> </br>" +
 //         "<b>Save: </b> Updates only the meta data such as Template name, description and group. Any changes made in sheets, workflows or app will take effect when template is published. </br></br>" +
@@ -135,19 +135,19 @@
 // })
 
 // EV.show({
-//     evetType: "Success",
+//     eventType: "Success",
 //     heading: "Great !",
 //     eventDescription: "Success ! your <b>Ready app :</b> has been created, it'll be opened in a new tab."
 // })
 
 // EV.show({
-//     evetType: "Error",
+//     eventType: "Error",
 //     heading: "Uh-OH !",
 //     eventDescription: "We seem to be facing as issue creating your app, please try again later or contact admin if issue persists."
 // })
 
 // EV.show({
-//     evetType: "Success",
+//     eventType: "Success",
 //     heading: "Great !",
 //     eventDescription: "Your <b>Ready App </b> has been created. It'll be opened in a new tab",
 //     onClose: {
@@ -158,24 +158,49 @@
 
 // EV.show({
 //     buttons: [{
-//             text: "Ok",
-//             class: "green",
-//             data:"asdasd",
-// 			bgColor:"red",
-//             onClick: function () {
-//                 console.log('OK Clicked')
-//             }
+//         text: "Ok",
+//         class: "green",
+//         data: "asdasd",
+//         bgColor: "red",
+//         onClick: function () {
+//             console.log('OK Clicked')
 //         }
+//     }
 //     ],
-//     evetType: "Success",
+//     eventType: "Success",
 //     heading: "Great !",
-// 	banner:{hide:false},
+//     banner: { hide: false },
 //     eventDescription: "Your <b>Ready App </b> has been created. It'll be opened in a new tab",
 //     onClose: {
 //         event: function (dataToPassToFunction) {
 //             console.log("tmkx");
 //         },
-// 		dataToPassToFunction: "sadasda"
-		
+//         dataToPassToFunction: "sadasda"
+
 //     }
+// })
+
+// EV.show({
+//     buttons: [
+//         {
+//             text: "Yes",
+//             class: "MyCustomClass",
+//             data: "'I wanna quit'",
+//             bgColor: "#bbb",
+//             onClick: function () {
+//                 console.log("User said he want's to: " + data)
+//             }
+//         }, {
+//             text: "Yes",
+//             class: "MyCustomClass",
+//             data: "'I wanna quit'",
+//             bgColor: "#bbb",
+//             onClick: function () {
+//                 console.log("User said he want's to: " + data)
+//             }
+//         }
+//     ],
+//     eventType: "Success",
+//     heading: "Great !",
+//     eventDescription: "Are you sure you want to <b>quit</b>?"
 // })
