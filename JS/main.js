@@ -18,7 +18,7 @@
     }
     class EVObj {
         constructor(options = {}) {
-            this.themeColor = options.themeColor || "#26bc6a";
+            this.themeColor = options.themeColor;
             this.heading = options.heading || "";
             this.eventDescription = options.eventDescription || "";
             this.banner = options.banner || {};
@@ -32,19 +32,19 @@
             this.evetType = options.evetType || "success";
             switch (options.evetType.toLowerCase()) {
                 case "success":
-                    this.themeColor = "#20d472";
+                    this.themeColor = this.themeColor || "#20d472";
                     this.icon = successSVG;
                     break;
                 case "error":
-                    this.themeColor = "#f65656";
+                    this.themeColor = this.themeColor ||"#f65656";
                     this.icon = errorSVG;
                     break;
                 case "warning":
-                    this.themeColor = "rgb(253, 197, 2)";
+                    this.themeColor = this.themeColor ||"#fdc702";
                     this.icon = errorSVG;
                     break;
                 case "info":
-                    this.themeColor = "rgb(253, 197, 2)";
+                    this.themeColor = this.themeColor ||"#fdc702";
                     this.icon = infoSVG;
                     break;
             }
@@ -105,7 +105,7 @@
             let clone = original.cloneNode(true);
             clone.textContent = "CLOSE";
             clone.addEventListener('click', EV.close);
-            clone.style.background = "#26bc6a"
+            clone.style.background = EV.data.themeColor
             buttonContainer.appendChild(clone);
         }
     }
