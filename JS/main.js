@@ -1,4 +1,5 @@
-﻿var EV = (function () {
+﻿
+var EV = (function () {
     "use strict"
     var isHTMLInitialized = document.querySelector("#ev1") != null;
     var primaryHtml = `<div></div>`;
@@ -69,6 +70,7 @@
         }, 100);
     }
     function populateEV(data) {
+        var bodyScroll = document.body.scrollTop;
         var $element = document.querySelector('body #ev1');
         $element.classList.contains('isEVOpen') ? closeEV() : false;
         bodyOverflowvalue = document.querySelector('body').style.overflow;
@@ -78,6 +80,7 @@
         $element.querySelector('.banner .image').innerHTML = data.icon;
         $element.querySelector('.event-head').textContent = data.heading;
         $element.querySelector('.event-body').innerHTML = data.eventDescription;
+        $element.style.top = bodyScroll;
         $element.classList.add('isEVOpen');
         $element.style.display = 'flex';
     }
@@ -105,6 +108,7 @@
             let clone = original.cloneNode(true);
             clone.textContent = "CLOSE";
             clone.addEventListener('click', EV.close);
+            clone.addEventListener('click', function(){ EV.data.onClose.event(EV.data.onClose.data)});
             clone.style.background = EV.data.themeColor
             buttonContainer.appendChild(clone);
         }

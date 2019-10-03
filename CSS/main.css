@@ -16,7 +16,8 @@
     overflow: hidden;
     cursor: default;
     transition: all cubic-bezier(.18, .89, .32, 1.28) .4s;
-    transform: scale(0)
+    transform: scale(0);
+    
 }
 
 .event-visualizer-wrapper .event-visualizer .banner {
@@ -32,12 +33,20 @@
     height: 45px
 }
 
+.event-visualizer-wrapper .event-visualizer-body{
+    display: flex;
+    flex-flow: column;
+    min-width: 300px;
+}
+
 .event-visualizer-wrapper .event-visualizer-body .event-head {
+    letter-spacing: .35px;
     text-align: center;
-    margin: 13px 0 8px 0;
-    font-size: 21px;
-    font-weight: 800;
-    letter-spacing: .35px
+    line-height: 2.5;
+    padding: 0px 10px;
+    overflow-x: auto;
+    height: min-content;
+    font-size: 18px;
 }
 
 .event-visualizer-wrapper .event-visualizer-body .event-body {
@@ -54,6 +63,7 @@
 
 .event-visualizer-wrapper .event-visualizer-body .event-button {
     /* height: 40px; */
+    padding-top: 15px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -73,3 +83,4 @@
 .scale-1 {
     transform: scale(1) !important
 }
+

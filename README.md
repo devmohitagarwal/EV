@@ -48,7 +48,7 @@ EV was made as a minimal, simple popup/modal for times when the time crunch hits
     for **Success** type:
 
 	   EV.show({
-                    evetType: "Success",
+                    eventType: "Success",
                     heading: "Great !",
                     eventDescription: "<b>EV</b> successfully initialized."
                 })
@@ -56,7 +56,7 @@ EV was made as a minimal, simple popup/modal for times when the time crunch hits
 	for **Error** type
 
 	   EV.show({
-                    evetType: "Error",
+                    eventType: "Error",
                     heading: "Uh-Oh !",
                     eventDescription: "It's not <b>Friday</b> yet."
                 })
@@ -64,9 +64,9 @@ EV was made as a minimal, simple popup/modal for times when the time crunch hits
     for **Informative/Warning** type
 
         EV.show({
-            evetType: "Info",
-            heading: "Information",
-            eventDescription: "The object you're lookin for is no longer available, Please try again next time"
+                    eventType: "Info",
+                    heading: "Information",
+                    eventDescription: "The object you're lookin for is no longer available, Please try again next time"
         })
     
 
@@ -88,20 +88,20 @@ When the key `eventType` is "success" , "error" or "information"/"warning", the 
                     class: "MyCustomClass",
                     data: "'I wanna quit'",
                     bgColor: "#bbb",
-                    onClick: function () {
+                    onClick: function (data) {
                         console.log("User said he want's to: " + data)
                     }
                 }, {
                     text: "Hell No",
                     class: "MyCustomClass2",
                     data: "'I am staying'",
-                    bgColor: "#26bc6a",
-                    onClick: function () {
+                    bgColor: "#2ecc71",
+                    onClick: function (data) {
                         console.log("User said he want's to: " + data)
                     }
                 }
             ],
-            evetType: "Success",
+            eventType: "Success",
             heading: "Exit ?",
             eventDescription: "Are you sure you want to <b>quit</b>?"
         })
