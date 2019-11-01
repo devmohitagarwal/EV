@@ -10,6 +10,11 @@ body{
     background: #FF0000;
 }
 
+.head-banner{
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
 .style-class{
     color: #13b3ff;
     font-weight: 500;
@@ -86,6 +91,9 @@ body{
 
 
 .sample-container{
+    opacity: 0;;
+    transform: translateY(100%);
+    /* transition: all ease 0.8s; */
     box-shadow: 0px 0px 38px rgba(0, 0, 0, 0.62), 0px 0px 12px rgba(0, 0, 0, 0.64);
     border-radius: 15px;
     margin: 8rem auto;

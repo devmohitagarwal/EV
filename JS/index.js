@@ -16,15 +16,28 @@ require(["vs/editor/editor.main"], function () {
     });
     sampleBasics = monaco.editor.create(document.getElementById('sample-basic'), {
 		value: [sampleBasicCode].join('\n'),
-		language: 'html',
+		language: 'javascript',
 		theme: 'vs-dark' 
 	});
 	
 	sampleButtons.addListener('didType', () => {
 		// console.log(editor.getValue());
-	});
+    });
+    loadPage();
+
   
 });
+
+var loadPage = function(){
+    $('.head-banner').css('display','block');
+    $('.sample-container').css('display','block');
+    setTimeout(() => {
+        $('.head-banner').css('transition','all ease 0.8s').css('opacity','1').css('transform','translateY(0)');
+        $('.sample-container').css('transition','all ease 0.8s').css('opacity','1').css('transform','translateY(0)');
+        $('.loader').css('transform','scale(0)')
+    }, 0);
+
+}
 
 console.devLog = function(data){
     console.log(data);
