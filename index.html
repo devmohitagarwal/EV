@@ -1,8 +1,10 @@
 <html>
 
 <head>
-    <title>Sample for testing Status bar color
+    <title>Event-visualizer
     </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="msapplication-tap-highlight" content="no" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="viewport"
@@ -17,9 +19,8 @@
                 <div class="image"> <img src=""></div>
             </div>
             <div class="event-visualizer-body">
-                <div class="event-head">Warning !</div>
-                <div class="event-body">An error has occured while creating template.An error has occured while creating
-                    template.An error has occured while creating template.An error has occured while creating template.
+                <div class="event-head"></div>
+                <div class="event-body">
                 </div>
                 <div class="event-button">
 
@@ -27,8 +28,8 @@
             </div>
         </div>
     </div>
-
-    <div class="home">
+    <div class="head-banner" style="display: none">
+        <div class="home">
             <div class="primary-para">
                     <div class="para-heading">
                             Ideology
@@ -47,7 +48,15 @@
             Copy the script tag <div><span class="url">&lt;script src="JS/main.js"&gt;&lt;/script&gt;</span></div> to try or <div class="download">DOWNLOAD</div>
         </div>
     </div>
-    <div class="sample-container">
+    </div>
+    <div class="loader" style="">
+        <div class="inner one"></div>
+        <div class="inner two"></div>
+        <div class="inner three"></div>
+      </div>
+      
+
+    <div class="sample-container"style="" >
         <div class="heading">
             <div class="heading-text">BASIC
                 <div class="round-border">
@@ -82,7 +91,7 @@
                     </div>
 
                 </div>
-                <div class="actions">
+                <div class="actions" data-codeFor="sample-basic">
                     <div class="action-button run-code" data-codeFor="sample-basic">RUN CODE</div>
                     <div class="action-button copy-code">COPY CODE</div>
                 </div>
@@ -95,7 +104,7 @@
 
     </div>
 
-    <div class="sample-container">
+    <div class="sample-container"style="">
         <div class="heading">
             <div class="heading-text">ADDING BUTTONS
                 <div class="round-border">
@@ -113,7 +122,7 @@
                     </div>
 
                 </div>
-                <div class="actions">
+                <div class="actions" data-codeFor="sample-buttons">
                     <div class="action-button run-code" data-codeFor="sample-buttons">RUN CODE</div>
                     <div class="action-button copy-code">COPY CODE</div>
                 </div>
